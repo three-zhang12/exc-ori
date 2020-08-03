@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1162</width>
+    <height>1189</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+	font-size:16px;
+	font-family:微软雅黑;
+
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Tab 1</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1,2,2,2,2,0,2,2,2,2">
+          <item>
+           <widget class="QLabel" name="data_show_label">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>数据显示行数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="data_show_cbox">
+            <item>
+             <property name="text">
+              <string>5</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>10</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>15</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>20</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="operation_cbox">
+            <item>
+             <property name="text">
+              <string>单列操作</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>单行操作</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>多列操作</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>多行操作</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>区域操作</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>整体操作</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="operation_index_col">
+            <property name="placeholderText">
+             <string>请输入所在列的列数或相应列名</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="operation_do">
+            <property name="placeholderText">
+             <string>请输入表达式</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="operation_button">
+            <property name="text">
+             <string>开始</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="filter_cbox">
+            <item>
+             <property name="text">
+              <string>lowpass</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>highpass</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="filter_line">
+            <property name="placeholderText">
+             <string>请输入截止频率(Hz)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="filter_line_1">
+            <property name="placeholderText">
+             <string>采样频率</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="filter_button">
+            <property name="text">
+             <string>滤波</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,2,2,2,1,8">
+          <item>
+           <widget class="QComboBox" name="eval_choice_cbox">
+            <item>
+             <property name="text">
+              <string>单列</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>单行</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="eval_cbox">
+            <item>
+             <property name="text">
+              <string>最大值</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>最小值</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>平均值</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>和</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>标准误差</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>无偏误差</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>众数</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>偏差</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>连乘积</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>中位数</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="eval_line">
+            <property name="placeholderText">
+             <string>请输入指定列数或行数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="eval_button">
+            <property name="text">
+             <string>开始</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextBrowser" name="eval_show">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="data_show_table"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pic">
+       <attribute name="title">
+        <string>Tab 2</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,19">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1,1,1,2,0,1,1,0">
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QComboBox" name="pic_cbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <item>
+               <property name="text">
+                <string>单列</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>单行</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>全部列</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="pic_line">
+              <property name="placeholderText">
+               <string>单列情况下请输入列数</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="pic_choose_cbox"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pic_button">
+              <property name="text">
+               <string>预览</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="section_label">
+              <property name="text">
+               <string>区间求差</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="section_line">
+              <property name="placeholderText">
+               <string>请输入区间</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="section_button">
+              <property name="text">
+               <string>开始</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="section_show">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Ignored">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="pic_show_layout"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1162</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="file">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionopen"/>
+    <addaction name="actionsave"/>
+   </widget>
+   <addaction name="file"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionopen">
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="actionsave">
+   <property name="text">
+    <string>另存为</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
